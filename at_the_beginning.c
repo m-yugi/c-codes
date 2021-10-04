@@ -1,35 +1,34 @@
 #include<stdio.h>
 #include<stdlib.h>
-struct Node
-{
+struct Node{
     int data;
     struct Node* next;
 };
 struct Node* head;
-void insertbig(int data){
+void atbig(int n){
     struct Node* ptr=(struct Node*)malloc(sizeof(struct Node));
-    ptr->data=data;
+    ptr->data=n;
     ptr->next=head;
     head=ptr;
 }
 void display(){
-    struct Node* ptr=head;
-    while (ptr!=NULL)
-    {
+    struct Node *ptr=head;
+    while(ptr!=NULL){
         printf("%d\n",ptr->data);
         ptr=ptr->next;
     }
-    
 }
 void main(){
-    head=NULL;
-    int i,n,x;
-    printf("enter the no of nodes\n");
-    scanf("%d",&n);
-    for(i=0;i<n;i++){
-        printf("\nenter the data of the node\n");
-        scanf("%d",&x);
-        insertbig(x);
-    }
+    struct Node* two=(struct Node*)malloc(sizeof(struct Node));
+    struct Node* three=(struct Node*)malloc(sizeof(struct Node));
+    struct Node* four=(struct Node*)malloc(sizeof(struct Node));
+    head=two;
+    two->data=2;
+    two->next=three;
+    three->data=3;
+    three->next=four;
+    four->data=4;
+    four->next=NULL;
+    atbig(10);
     display();
 }
