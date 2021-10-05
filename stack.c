@@ -62,10 +62,16 @@ void display(struct stack* s){
 }
 void main(){
     int n,x,y;
+    int flag=1;
     printf("enter the capacity of the stack\n");
     scanf("%d",&n);
+    if(n==0){
+    	flag=0;
+    	printf("invalid input pls try again");
+	}
     struct stack* arr=create(n);
-    while (1)
+    
+    while (flag)
     {
     	printf("\nplease select the option\n");
         printf(" 1.push\n 2.pop\n 3.peek\n 4.isempty\n 5.isfull\n 6.display\n 7.exit\n");
@@ -103,7 +109,7 @@ void main(){
             display(arr);
             break;
         case 7:
-            exit(0);
+            flag=0;
             break;
         default:
         printf("\nsorry wrong input\n");
