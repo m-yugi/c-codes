@@ -14,7 +14,6 @@ void insertbig(int data){
         head=ptr;
     }
     else{
-    ptr->data=data;
     ptr->next=head;
     head=ptr;
     }
