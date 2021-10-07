@@ -25,6 +25,7 @@ void inbig(int n){
 }
 void inend(int n){
     struct node* ptr=(struct node*)malloc(sizeof(struct node));
+    ptr->data=n;
     if(head==NULL){
         ptr->next=NULL;
         ptr->prev=NULL;
@@ -49,6 +50,7 @@ void atpos(int pos,int n){
         ptr=ptr->next;
     }
     struct node* p=(struct node*)malloc(sizeof(struct node));
+    p->data=n;
     ptr->prev->next=p;
     p->prev=ptr->prev;
     p->next=ptr;
@@ -69,16 +71,39 @@ void display(){
 }
 void main(){
     head=NULL;
-    int flag=1,n;
+    int flag=1,n,y,i;
     while(flag){
-    printf("\nenter the value you want to insert in the list\n");
-    scanf("%d",&n);
-    if(n>=0){
-    inbig(n);
+    printf("\npls select the options below\n");
+    printf("\n 1.insert at the begin\n 2.insert at the end\n 3.insert at the position\n 4.display\n 5.exit\n");
+    scanf("%d",&y);
+    switch (y)
+    {
+    case 1:
+        printf("\nenter the value of the node\n");
+        scanf("%d",&n);
+        inbig(n);
+        break;
+    case 2:
+        printf("enter the element to insert at the end");
+        scanf("%d",&n);
+        inend(n);
+        break;
+    case 3:
+        printf("\npls enter the postion of the element\n");
+        scanf("%d",&i);
+        printf("\npls enter the value of the element to add\n");
+        scanf("%d",&n);
+        atpos(i,n);
+        break;
+    case 4:
+        display();
+        break;
+    case 5:
+        flag=0;
+        break;
+    default:
+        printf("\nwrong choice pls select again\n");
+        break;
     }
-    else{
-    flag=0;
-    }
-    }
-    display();
+}
 }
