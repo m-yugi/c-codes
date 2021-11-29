@@ -85,7 +85,7 @@ top=NULL;
             }
             break;
         case 5:
-            printf("\ntechnically we ae using heap memory\n as the stack memory so we cant tell if the stack is full\n because we dont know the capacity of the heap\n");
+            printf("\ntechnically we are using heap memory\n as the stack memory so we cant tell if the stack is full\n because we dont know the capacity of the heap\n");
             break;
         case 6:
             display();
