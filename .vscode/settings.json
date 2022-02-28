@@ -2,6 +2,14 @@
     "C_Cpp.errorSquiggles": "Disabled",
     "files.associations": {
         "stdio.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "PRAC1.C": "cpp",
+        "PRAC2.C": "cpp",
+        "PRAC3.C": "cpp",
+        "PRAC4.C": "cpp",
+        "PRAC5.C": "cpp",
+        "PRAC6.C": "cpp",
+        "PRAC7.C": "cpp",
+        "stdlib.h": "c"
     }
 }
