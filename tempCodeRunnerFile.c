@@ -1,7 +1,22 @@
-    printf("%d",root->data);
-    printf("%d",root->left->data);
-    printf("%d",root->right->data);
-    printf("%d",root->left->right->data);
-    printf("%d",root->left->left->data);
-    printf("%d",root->right->left->data);
-    printf("%d",root->right->right->data);
+            // if (i % 2 == 0)
+            //     {
+            //         if (j % 2 == 0 && (j >= mid - i && j <= mid + i))
+            //         {
+            //             printf("*");
+            //         }
+            //         else
+            //         {
+            //             printf(" ");
+            //         }
+            //     }
+            //     else
+            //     {
+            //         if (j % 2 != 0 && (j >= mid - i && j <= mid + i))
+            //         {
+            //             printf("*");
+            //         }
+            //         else
+            //         {
+            //             printf(" ");
+            //         }
+            //     }
